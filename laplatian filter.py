@@ -1,7 +1,7 @@
 import cv2
 import matplotlib.pyplot as plt
 import numpy as np
-img=cv2.imread(r"C:\Users\Arup\Desktop\dip\image.jpg",0)
+img=cv2.imread(r"E:\Hons 3rd Year 2nd semester books\Digital Image Processing\DIP Lab\fb profile small.jpg",0)
 img=cv2.cvtColor(img,cv2.COLOR_BGR2RGB)
 plt.imshow(img,cmap='gray')
 plt.title("Original Image")

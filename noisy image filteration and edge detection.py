@@ -7,7 +7,7 @@ print("Program Started...")
 # -------------------------------
 # Load image (Grayscale)
 # -------------------------------
-img = cv2.imread(r"E:\Hons 3rd Year 2nd semester books\Digital Image Processing\DIP Lab\DIP Lab\fb profile small.jpg", 0)
+img = cv2.imread(r"E:\Hons 3rd Year 2nd semester books\Digital Image Processing\DIP Lab\fb profile small.jpg", 0)
 img = cv2.resize(img, (256, 256))
 img = img.astype(np.float32)
 

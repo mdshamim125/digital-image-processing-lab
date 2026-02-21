@@ -3,7 +3,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # Load image in grayscale
-img = cv2.imread(r"C:\Users\Arup\Desktop\dip\car.png", 0)
+img = cv2.imread(r"E:\Hons 3rd Year 2nd semester books\Digital Image Processing\DIP Lab\fb profile small.jpg", 0)
 
 # Convert to int for safe calculation
 img_int = img.astype(int)
