@@ -49,9 +49,14 @@ R, G, B = img_rgb[:, :, 0], img_rgb[:, :, 1], img_rgb[:, :, 2]
 
 plt.figure(figsize=(10, 4))
 
-plt.subplot(1, 3, 1)
+# Creates a grid layout for multiple images  (rows, columns, position)
+plt.subplot(1, 3, 1) 
+
+# shows image data as picture in grayscale (black–white)
 plt.imshow(R, cmap='gray')
 plt.title("Red Channel")
+
+# Removes axis lines and numbers.
 plt.axis('off')
 
 plt.subplot(1, 3, 2)
