@@ -51,13 +51,32 @@ def pad(image, k=3):
 # ------------------------------------------------------------
 def min_filter(image, k=3):
     padded = pad(image, k)
+    # Without padding → window goes outside image Border values are copied from edge pixels (mode='edge')
     out = np.zeros_like(image)
 
+
+# shape = (height, width)
+# shape[0] = number of rows (height/row) 
+# region = padded[i:i+k, j:j+k] Extracts a k×k window around pixel.
+# np.min(region) = minimum pixel value in the region
+# Sliding window:
+# [ x x x ]
+# [ x P x ]←P=current pixel this process is called Sliding window operation
+# [ x x x ]
+# Sliding window operation
+# Replaces current pixel with that value
+# Move to next pixel
     for i in range(image.shape[0]):
         for j in range(image.shape[1]):
             out[i, j] = np.min(padded[i:i+k, j:j+k])
 
     return out
+
+# Algorithm:
+# 1. Take 3×3 neighbors
+# 2. Find smallest value
+# 3. Replace pixel with that value
+# 4. Move to next pixel
 
 
 # ------------------------------------------------------------
